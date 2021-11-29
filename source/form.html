@@ -5,7 +5,6 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <h1 class="visually_hidden">Магазин питания для котов</h1>
     <header class="header">
       <div class="header__logo_img"></div>
       <a class="header__logo logo">
@@ -15,55 +14,64 @@
         <span class="visually_hidden">Меню</span>
       </button>
     </header>
-    <main class="unique_content">
-      <section class="promo">
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img class="promo__img" src="img/can.png" width="280" height="270" alt="банка с cat energy со вкусом курицы">
-        <button class="promo__button" type="button">подобрать программу</button>
-      </section>
-      <section class="result">
-        <ul class="result__list">
-          <li class="result__item">
-            <h3 class="result__subject">похудение</h3>
-            <p class="result__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="result__link" href="">каталог slim</a>
-          </li>
-          <li class="result__item">
-            <h3 class="result__subject">набор массы</h3>
-            <p class="result__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="result__link" href="">каталог pro</a>
-          </li>
-        </ul>
-      </section>
-      <section class="advantages">
-        <h2 class="advantages__title visually_hidden">Преимущества функционального питания</h2>
-        <p class="advantages__text">Как это работает</p>
-        <ul class="advantages__list">
-          <li class="advantages__item">Функциональное питание содержит только полезные питательные вещества.</li>
-          <li class="advantages__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-          <li class="advantages__item">Замените один-два приема обычной еды на наше функциональное питание.</li>
-          <li class="advantages__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
-        </ul>
-      </section>
-      <section class="example">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-        <table class="example__table">
-          <tr class="example__table_row">
-            <td class="example__table_data">5 КГ</td>
-            <td class="example__table_data">60 ДНЕЙ</td>
-          </tr>
-          <tr class="example__table_row">
-            <td class="example__table_data">снижение веса</td>
-            <td class="example__table_data">затрачено времени</td>
-          </tr>
-        </table>
-        <span class="example__text">Затраты на питание: 15 000 РУБ. </span>
-        <img class="example__img" src="img/cat.jpg" width="280" height="232" alt="толстый кот">
-        <button class="example__button" type="button">было</button>
-        <button class="example__button" type="button">стало</button>
-      </section>
+    <main class="main_form">
+      <h1 class="main_form__title">Подбор программы</h1>
+      <form class="main_form__form form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="form__filter">
+          <legend class="form__filter_title">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
+          <label class="form__filter_label">Имя:*
+            <input class="form__filter_input" type="text" name="Имя">
+          </label>
+          <label class="form__filter_label">Вес (кг):*
+            <input class="form__filter_input" type="text" name="Вес (кг)">
+          </label>
+          <label class="form__filter_label">Возраст (лет):
+            <input class="form__filter_input" type="text" name="Возраст (лет)">
+          </label>
+        </fieldset>
+        <fieldset class="form__filter">
+          <legend class="form__filter_title visually_hidden">Выбор программы</legend>
+          <label class="form__filter_label">Похудение
+            <input class="form__filter_input" type="radio" name="radio" value="Похудение">
+          </label>
+          <label class="form__filter_label">Набор массы
+            <input class="form__filter_input" type="radio" name="radio" value="Набор массы">
+          </label>
+          <label class="form__filter_label">Не знаю (Нужен ваш совет)
+            <input class="form__filter_input" type="radio" name="radio" value="Не знаю (Нужен ваш совет)">
+          </label>
+        </fieldset>
+        <fieldset class="form__filter">
+          <legend class="form__filter_title">Контактные данные (владельца кота)</legend>
+          <label class="form__filter_label" >E-mail:*
+            <input class="form__filter_input" type="email" name="E-mail">
+          </label>
+          <label class="form__filter_label">Телефон:*
+            <input class="form__filter_input" type="tel" name="Телефон">
+          </label>
+        </fieldset>
+        <fieldset class="form__filter">
+          <legend class="form__filter_title">Комментарий</legend>
+          <textarea class="form__filter_text" placeholder="Расскажите обо всех повадках кота" name="Комментарий"></textarea>
+        </fieldset>
+        <fieldset class="form__filter">
+          <legend class="form__filter_title">Дополнительно</legend>
+          <label class="form__filter_label">сахарозаменитель
+            <input class="form__filter_input" type="checkbox" name="сахарозаменитель">
+          </label>
+          <label class="form__filter_label">питьевая вода
+            <input class="form__filter_input" type="checkbox" name="питьевая вода">
+          </label>
+          <label class="form__filter_label">молоко
+            <input class="form__filter_input" type="checkbox" name="молоко">
+          </label>
+          <label class="form__filter_label">витамины
+            <input class="form__filter_input" type="checkbox" name="витамины">
+          </label>
+        </fieldset>
+        <button class="form__button" type="submit">отправить заявку</button>
+        <span class="form__text">* — Обязательные поля</span>
+      </form>
     </main>
     <footer class="footer">
       <p class="footer__text">приглашаем к сотрудничеству дилеров!</p>
@@ -86,8 +94,5 @@
         <img class="htmlacademy__img" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип htmlacademy">
       </a>
     </footer>
-
-    <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p> -->
-
   </body>
 </html>
