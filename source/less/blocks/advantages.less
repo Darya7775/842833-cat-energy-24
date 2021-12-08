@@ -1,0 +1,40 @@
+.advantages {
+  display: grid;
+}
+
+.advantages__text {
+  .font();
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.advantages__list {
+  list-style: none;
+}
+
+.advantages__item {
+  height: 60px;
+  padding-left: 80px;
+  color: #444444;
+  position: relative;
+}
+
+.advantages__item--leaf::before {
+  .advantages__item-before();
+  background-image: url("../img/leaf.svg");
+}
+
+.advantages__item--tub::before {
+  .advantages__item-before();
+  background-image: url("../img/tub.svg");
+}
+
+.advantages__item--eat::before {
+  .advantages__item-before();
+  background-image: url("../img/eat.svg");
+}
+
+.advantages__item--alarm::before {
+  .advantages__item-before();
+  background-image: url("../img/alarm.svg");
+}
