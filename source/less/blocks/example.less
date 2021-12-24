@@ -1,10 +1,10 @@
 .example {
-  background-color: #eaeaea;
+  width: 100%;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     border-top: 1px solid #e6e6e6;
     background-color: transparent;
-    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -12,15 +12,17 @@
   }
 
   &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #eaeaea;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
     @media (min-width: @tablet-width) {
-      content: "";
-      width: 100%;
       height: 43%;
-      background-color: #eaeaea;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
     }
 
     @media (min-width: @desktop-width) {
@@ -30,14 +32,18 @@
 }
 
 .example__wrapper {
-  padding: 25px 20px 48px;
+  .wrapper();
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 48px;
 
   @media (min-width: @tablet-width) {
-    padding: 43px 30px 59px;
+    padding-top: 43px;
+    padding-bottom: 61px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 43px 110px 75px;
+    padding-bottom: 70px;
   }
 }
 
