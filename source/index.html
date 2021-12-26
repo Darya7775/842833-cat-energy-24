@@ -11,11 +11,7 @@
     <header class="header">
       <a class="header__logo-img" href="#"></a>
       <a class="header__logo logo" href="#"></a>
-      <button class="header__button" type="button">
-        <span class="visually-hidden">Меню</span>
-        <span class="header__button-row"></span>
-      </button>
-      <nav class="navigation">
+      <nav class="navigation navigation--closed navigation--nojs">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="#">главная</a>
@@ -27,7 +23,12 @@
             <a class="navigation__link" href="#">подбор программы</a>
           </li>
         </ul>
+        <button class="navigation__button" type="button">
+          <span class="visually-hidden">Меню</span>
+          <span class="navigation__button-row"></span>
+        </button>
       </nav>
+
     </header>
     <main class="unique-content">
       <section class="promo">
@@ -94,6 +95,10 @@
         <p class="footer__text">приглашаем к сотрудничеству дилеров!</p>
         <address class="footer__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
+      <iframe  src = " https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002815!2d30.32085871569252!3d59.93871916905466!2m3!1f0!2f0!3f0!3m2! 1i1024! 2i768! 4f13.1! 3м3! 1м2! 1s0x4696310fca145cc1% 3A0x42b32648d8238007! 2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY! 5e0! 3м2! 1sru! 2sru! 4v1640345196415! 5м2! 1sru! 2sru "
+      width = "320"
+      height = "362">
+      </iframe >
       <div class="footer__container">
         <a class="footer__logo">
           <img src="img/logo.svg" width="101" height="18" alt="Логотип">
@@ -121,6 +126,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.navigation');
+      var navToggle = document.querySelector('.navigation__button');
+
+      navMain.classList.remove('navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('navigation--closed')) {
+          navMain.classList.remove('navigation--closed');
+          navMain.classList.add('navigation--opened');
+        } else {
+          navMain.classList.add('navigation--closed');
+          navMain.classList.remove('navigation--opened');
+        }
+      });
+    </script>
 
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p> -->
 
