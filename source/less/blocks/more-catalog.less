@@ -117,6 +117,11 @@
   background-image: url("../img/background_green.png"), url("../img/catalog_image.jpg");
   background-repeat: repeat, no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background_green@2x.png"), url("../img/catalog_image@2x.png");
+    background-size: auto auto, 280px auto;
+  }
+
   @media (min-width: @tablet-width) {
     max-width: 707px;
     height: 200px;
@@ -124,18 +129,28 @@
     justify-content: space-between;
     background-image: url("../img/background_green.png"), url("../img/catalog_image_tablet.jpg");
     background-repeat: repeat, no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background_green@2x.png"), url("../img/catalog_image_tablet@2x.jpg");
+      background-size: auto auto, 707px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     max-width: 245px;
     height: 289px;
-    background-image: url("../img/background_green.png"), url("../img/catalog_image.jpg");
+    background-image: url("../img/background_green.png"), url("../img/catalog_image_desktop.jpg");
     background-repeat: repeat, no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 60px;
     padding: 60px 0 42px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background_green@2x.png"), url("../img/catalog_image_desktop@2x.jpg");
+      background-size: auto auto, 245px auto;
+    }
   }
 }
 
