@@ -12,11 +12,9 @@
 
 .catalog__list {
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
 
   @media (min-width: @tablet-width) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: end;
     gap: 68px 60px;
@@ -30,7 +28,7 @@
 
 .catalog__item {
   width: 100%;
-  max-width: 320px;
+  max-width: 280px;
   padding: 19px 0 35px;
   position: relative;
 
