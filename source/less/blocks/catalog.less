@@ -12,11 +12,9 @@
 
 .catalog__list {
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
 
   @media (min-width: @tablet-width) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: end;
     gap: 68px 60px;
@@ -30,7 +28,7 @@
 
 .catalog__item {
   width: 100%;
-  max-width: 320px;
+  max-width: 280px;
   padding: 19px 0 35px;
   position: relative;
 
@@ -61,8 +59,26 @@
 .catalog__item-img {
   @media (min-width: @tablet-width) {
     position: absolute;
-    left: 40%;
+    left: 25%;
     top: 26px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 16%;
+  }
+
+  &--size-500 {
+    @media (min-width: @tablet-width) {
+      width: 161px;
+      height: 172px;
+    }
+  }
+
+  &--size-1000 {
+    @media (min-width: @tablet-width) {
+      width: 168px;
+      height: 206px;
+    }
   }
 }
 
