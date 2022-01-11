@@ -61,4 +61,25 @@
 
 .footer iframe {
   border: none;
+  width: calc(100% + 40px);
+
+  @media (min-width: @tablet-width) {
+    width: calc(100% + 60px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(100% + 120px);
+  }
+}
+
+.social__icon {
+  fill: #666666;
+}
+
+.social__link:hover .social__icon {
+  fill: #68b738;
+}
+
+.social__link:active .social__icon {
+  opacity: 0.5;
 }
