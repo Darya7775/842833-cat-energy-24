@@ -16,7 +16,6 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: end;
     gap: 68px 60px;
   }
 
@@ -60,7 +59,6 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     left: 25%;
-    top: 26px;
   }
 
   @media (min-width: @tablet-width) {
@@ -71,6 +69,7 @@
     @media (min-width: @tablet-width) {
       width: 161px;
       height: 172px;
+      top: 30px;
     }
   }
 
@@ -78,6 +77,7 @@
     @media (min-width: @tablet-width) {
       width: 168px;
       height: 206px;
+      top: 0;
     }
   }
 }
@@ -116,8 +116,9 @@
 
 .catalog__item-button {
   width: 100%;
-  max-width: 280px;
-  padding: 10px 104px;
+  min-height: 40px;
+  max-width: 262px;
+  padding: 10px 10px;
   grid-row: 3/4;
 
   @media (min-width: @desktop-width) {
