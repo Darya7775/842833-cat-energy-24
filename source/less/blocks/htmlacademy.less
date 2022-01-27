@@ -1,14 +1,29 @@
 .htmlacademy {
   color: #000000;
   text-decoration: none;
-}
-
-.htmlacademy__wrapper {
   display: flex;
   justify-content: space-between;
   padding-top: 26px;
+  align-items: center;
+
+  &:active .htmlacademy__item {
+    opacity: 0.3;
+  }
+
+  &:hover .htmlacademy__icon {
+    fill: #68b738;
+  }
+
+  &:active .htmlacademy__icon {
+    opacity: 0.5;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    gap: 22px;
   }
+}
+
+.htmlacademy__icon {
+  fill: #666666;
 }

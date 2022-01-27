@@ -31,24 +31,82 @@
   padding-left: 80px;
   color: #444444;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    min-height: 280px;
+    padding-top: 111px;
+    padding-left: 0;
+  }
 }
 
-.advantages__item--leaf::before {
-  .advantages__item-before();
-  background-image: url("../img/leaf.svg");
+.advantages__item--leaf {
+  &::before {
+    .advantages__item-before();
+    background-image: url("../img/leaf.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/1.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/1@2x.png");
+      background-size: auto auto, 112px auto;
+    }
+  }
 }
 
-.advantages__item--tub::before {
-  .advantages__item-before();
-  background-image: url("../img/tub.svg");
+.advantages__item--tub {
+  &::before {
+    .advantages__item-before();
+    background-image: url("../img/tub.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/2.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/2@2x.png");
+      background-size: auto auto, 134px auto;
+    }
+  }
 }
 
-.advantages__item--eat::before {
-  .advantages__item-before();
-  background-image: url("../img/eat.svg");
+.advantages__item--eat {
+  &::before {
+    .advantages__item-before();
+    background-image: url("../img/eat.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/3.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/3@2x.png");
+      background-size: auto auto, 134px auto;
+    }
+  }
 }
 
-.advantages__item--alarm::before {
-  .advantages__item-before();
-  background-image: url("../img/alarm.svg");
+.advantages__item--alarm {
+  &::before {
+    .advantages__item-before();
+    background-image: url("../img/alarm.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/4.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/4@2x.png");
+      background-size: auto auto, 136px auto;
+    }
+  }
 }

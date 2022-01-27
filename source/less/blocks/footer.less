@@ -4,32 +4,31 @@
   flex-direction: column;
   align-items: center;
   background-color: #f2f2f2;
-  padding: 26px 20px 32px;
-
-  @media (min-width: @tablet-width) {
-    padding: 60px 30px 62px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 62px 110px 56px;
-  }
 }
 
 .footer__wrapper {
   .wrapper();
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  top: 0;
-  left: 0;
-  padding-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 26px;
+  padding-top: 26px;
+  background-color: #ffffff;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 199px;
+  }
 }
 
 .footer__container {
+  .wrapper();
+
   @media (min-width: @tablet-width) {
     width: 100%;
-    max-width: 707px;
+    min-height: 147px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,6 +41,14 @@
   text-align: center;
   padding: 40px 0 32px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
   }
@@ -51,35 +58,36 @@
   .font();
   font-size: 16px;
   line-height: 20px;
+  max-width: 139px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 172px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 163px;
+  }
 }
 
 .footer__address {
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
+  max-width: 139px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    max-width: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 155px;
+  }
 }
 
 .footer iframe {
   border: none;
-  width: calc(100% + 40px);
-
-  @media (min-width: @tablet-width) {
-    width: calc(100% + 60px);
-  }
-
-  @media (min-width: @desktop-width) {
-    width: calc(100% + 120px);
-  }
-}
-
-.social__icon {
-  fill: #666666;
-}
-
-.social__link:hover .social__icon {
-  fill: #68b738;
-}
-
-.social__link:active .social__icon {
-  opacity: 0.5;
+  width: 100%;
 }

@@ -1,5 +1,5 @@
 .promo {
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   .wrapper();
 }
 
@@ -42,6 +42,20 @@
   }
 }
 
+.promo__cover {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 295px;
+  }
+}
+
+.promo__container {
+  @media (min-width: @tablet-width) {
+    padding-left: 90px;
+    position: relative;
+  }
+}
+
 .promo__title {
   .font();
   font-size: 36px;
@@ -52,12 +66,16 @@
   padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    width: 66%;
+    width: 73%;
     color: #000000;
     font-size: 60px;
     line-height: 60px;
     text-align: left;
     padding-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
@@ -95,6 +113,18 @@
 
 .promo__button {
   padding: 7px 44px;
-  display: block;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 8px;
+  left: calc(50% - 108px);
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 26px;
+    margin: none;
+    bottom: -74px;
+    left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 140px;
+  }
 }

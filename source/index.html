@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
@@ -16,7 +16,7 @@
           <img src="img/logo_img.svg" width="34" height="38" alt="Логотип магазина питания для котов">
         </picture>
       </a>
-      <a class="header__logo logo" href="index.html"></a>
+      <a class="header__logo" href="index.html"></a>
       <nav class="navigation navigation--closed navigation--nojs">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -38,17 +38,21 @@
     <main class="unique-content">
       <section class="promo">
         <div class="promo__wrapper"></div>
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/can_desktop.webp 1x, img/can_desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/can_tablet.webp 1x, img/can_tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/can_mobile.webp 1x, can_mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="img/can_desktop.png 1x, img/can_desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/can_tablet.jpg 1x, img/can_tablet@2x.jpg 2x">
-          <img class="promo__img" src="img/can_mobile.png" srcset="img/can_mobile@2x.png 2x" width="280" height="270" alt="банка с cat energy со вкусом курицы">
-        </picture>
-        <button class="promo__button button" type="button">подобрать программу</button>
+        <div class="promo__cover">
+          <div class="promo__container">
+            <h2 class="promo__title">Функциональное питание для котов</h2>
+            <p class="promo__slogan">Занялся собой? Займись котом!</p>
+            <button class="promo__button button" type="button">подобрать программу</button>
+          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/can_desktop.webp 1x, img/can_desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/can_tablet.webp 1x, img/can_tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/can_mobile.webp 1x, img/can_mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/can_desktop.png 1x, img/can_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/can_tablet.jpg 1x, img/can_tablet@2x.jpg 2x">
+            <img class="promo__img" src="img/can_mobile.png" srcset="img/can_mobile@2x.png 2x" width="280" height="270" alt="банка с cat energy со вкусом курицы">
+          </picture>
+        </div>
       </section>
       <section class="result">
         <ul class="result__list">
@@ -76,26 +80,37 @@
       </section>
       <section class="example">
         <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <table class="example__table">
-            <tr class="example__table-row">
-              <td class="example__table-data">5 КГ</td>
-              <td class="example__table-data">60 ДНЕЙ</td>
-            </tr>
-            <tr class="example__table-row">
-              <td class="example__table-data">снижение веса</td>
-              <td class="example__table-data">затрачено времени</td>
-            </tr>
-          </table>
-          <span class="example__text">Затраты на питание: 15 000 РУБ. </span>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="">
-            <source media="(min-width: 768px)" srcset="img/cat_tablet.png 1x, img/cat_tablet@2x.png 2x">
-            <img class="example__img" src="img/cat_mobile.png" srcset="img/cat_mobile@2x.png 2x" width="280" height="232" alt="толстый кот">
-          </picture>
-          <button class="example__button" type="button">было</button>
-          <button class="example__button" type="button">стало</button>
+          <div class="example__wrap">
+            <div>
+              <h2 class="example__title">Живой пример</h2>
+              <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+              <div class="example__cover">
+                <ul class="example__table">
+                  <li class="example__table-data">5 КГ
+                    <span class="example__table-desc">снижение веса</span>
+                  </li>
+                  <li class="example__table-data">60 ДНЕЙ
+                    <span class="example__table-desc">затрачено времени</span>
+                  </li>
+                </ul>
+                <span class="example__text">Затраты на питание: 15 000 РУБ. </span>
+              </div>
+            </div>
+            <div>
+              <picture>
+                <source media="(min-width: 1440px)" srcset="">
+                <source media="(min-width: 768px)" srcset="img/cat_tablet.png 1x, img/cat_tablet@2x.png 2x">
+                <img class="example__img" src="img/cat_mobile.png" srcset="img/cat_mobile@2x.png 2x" width="280" height="232" alt="толстый кот">
+              </picture>
+              <div class="example__container">
+                <button class="example__button" type="button">было</button>
+                <div class="example__switch">
+                  <button class="example__switch-button example__switch-button--before"></button>
+                </div>
+                <button class="example__button" type="button">стало</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -109,59 +124,42 @@
       height = "362">
       </iframe >
       <div class="footer__container">
-        <a class="footer__logo">
-          <img src="img/logo.svg" width="101" height="18" alt="Логотип">
+        <a class="footer__logo" href="#">
+          <img src="img/logo.svg" width="128" height="24" alt="Логотип">
         </a>
         <ul class="social">
           <li class="social__item social__item--vk">
             <a class="social__link" href="#">
               <svg class="social__icon" width="23" height="13">
-                <use href="img/sprite.svg#vk"></use>
+                <use href="img/sprite.svg#vk" viewBox=" 0 0 23 13"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social__item--instagram">
             <a class="social__link" href="#">
               <svg class="social__icon" width="16" height="16">
-                <use href="img/sprite.svg#instagram"></use>
+                <use href="img/sprite.svg#instagram" viewBox=" 0 0 16 16"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social__item--facebook">
             <a class="social__link" href="#">
               <svg class="social__icon" width="13" height="20">
-                <use href="img/sprite.svg#facebook"></use>
+                <use href="img/sprite.svg#facebook" viewBox=" 0 0 13 20"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <div class="htmlacademy__wrapper">
-          <a class="htmlacademy" href="#">HTML Academy</a>
-          <a href="#">
-            <svg width="27" height="34">
-              <use href="img/sprite.svg#htmlacademy"></use>
+          <a class="htmlacademy" href="#">
+            <span class="htmlacademy__item">HTML Academy</span>
+            <svg class="htmlacademy__icon" width="27" height="34">
+              <use href="img/sprite.svg#htmlacademy" viewBox=" 0 0 27 34"></use>
             </svg>
           </a>
-        </div>
       </div>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.navigation');
-      var navToggle = document.querySelector('.navigation__button');
-
-      navMain.classList.remove('navigation--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('navigation--closed')) {
-          navMain.classList.remove('navigation--closed');
-          navMain.classList.add('navigation--opened');
-        } else {
-          navMain.classList.add('navigation--closed');
-          navMain.classList.remove('navigation--opened');
-        }
-      });
-    </script>
+    <script src="/js/scripts.js"></script>
 
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p> -->
 

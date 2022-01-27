@@ -46,11 +46,19 @@
   }
 }
 
-.logo {
-  width: 101px;
-  height: 18px;
+.header__logo {
+  width: 128px;
+  height: 24px;
   background-image: url("../img/logo.svg");
   background-repeat: no-repeat;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
