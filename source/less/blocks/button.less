@@ -10,7 +10,12 @@
   text-transform: uppercase;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &:active {
-    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
   }
 }

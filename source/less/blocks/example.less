@@ -26,7 +26,8 @@
     }
 
     @media (min-width: @desktop-width) {
-      height: 72%;
+      height: 74%;
+      bottom: 0;
     }
   }
 }
@@ -35,7 +36,7 @@
   .wrapper();
   margin: 0 auto;
   padding-top: 25px;
-  padding-bottom: 48px;
+  padding-bottom: 44px;
 
   @media (min-width: @tablet-width) {
     padding-top: 43px;
@@ -43,7 +44,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 70px;
+    padding-bottom: 0;
+    padding-top: 24px;
   }
 }
 
@@ -51,6 +53,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 38px;
   }
 }
 
@@ -63,7 +66,7 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 63px;
+    margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
@@ -72,16 +75,19 @@
 }
 
 .example__desc {
+  font-family: "Arial", sans-serif;
   color: #444444;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 69px;
-    width: 384px;
+    width: 432px;
   }
 }
 
@@ -89,11 +95,13 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 83px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
-    gap: 47px;
+    gap: 59px;
+    margin-bottom: 77px;
   }
 }
 
@@ -107,6 +115,7 @@
   @media (min-width: @tablet-width) {
     gap: 42px;
     width: 366px;
+    margin-bottom: 0;
   }
 }
 
@@ -167,20 +176,31 @@
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
+    max-width: 174px;
     font-size: 20px;
+    text-transform: uppercase;
+    text-align: end;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     align-self: flex-start;
+    max-width: 436px;
   }
 }
 
 .example__img {
   display: block;
   margin: 0 auto;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     width: 592px;
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -42px;
   }
 }
 
@@ -196,12 +216,18 @@
   &:hover {
     border-bottom: 1px solid #cdcdcd;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .example__container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .example__switch {
@@ -251,7 +277,7 @@
     border: 1px solid #cdcdcd;
     border-radius: 50%;
     top: -14px;
-    left: calc(50% - 17px);
+    left: calc(50% - 14px);
 
     &:hover {
       box-shadow: inset 0 0 0 12px #ffffff, 0 2px 4px rgb(0 0 0 / 19%);

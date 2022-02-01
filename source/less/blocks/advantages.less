@@ -1,6 +1,10 @@
 .advantages {
   margin-bottom: 49px;
   .wrapper();
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .advantages__text {
@@ -8,19 +12,27 @@
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 73px;
+  }
 }
 
 .advantages__list {
   list-style: none;
   display: grid;
-  gap: 20px;
+  gap: 27px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
+    gap: 36px 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 80px;
   }
 }
 
@@ -33,6 +45,8 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
     min-height: 280px;
     padding-top: 111px;
     padding-left: 0;
@@ -48,7 +62,7 @@
   @media (min-width: @tablet-width) {
     background-image: url("../img/1.png");
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: 126px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/1@2x.png");
@@ -66,7 +80,7 @@
   @media (min-width: @tablet-width) {
     background-image: url("../img/2.png");
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: 121px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/2@2x.png");
@@ -84,7 +98,7 @@
   @media (min-width: @tablet-width) {
     background-image: url("../img/3.png");
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: 124px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/3@2x.png");
@@ -102,7 +116,7 @@
   @media (min-width: @tablet-width) {
     background-image: url("../img/4.png");
     background-repeat: no-repeat;
-    background-position-x: right;
+    background-position-x: 124px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/4@2x.png");

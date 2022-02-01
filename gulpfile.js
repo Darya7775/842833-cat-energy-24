@@ -76,7 +76,7 @@ const svg = () => {
 }
 
 const sprite = () => {
-  return gulp.src ('source/img/icons/*.svg')
+  return gulp.src('source/img/icons/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
     inlineSvg: true
@@ -99,7 +99,7 @@ const copy = (done) => {
 // Clean
 
 const clean = () => {
-  return del ('build');
+  return del('build');
 }
 
 // Server
@@ -127,13 +127,14 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/scripts.js', gulp.series(script))
+  gulp.watch('source/js/scripts.js', gulp.series(script));
+  gulp.watch('source/*.html', gulp.series(html));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 // Build
 
-export const build = gulp.series (
+export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -153,7 +154,7 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
-  gulp.parallel (
+  gulp.parallel(
     html,
     styles,
     script,
@@ -161,7 +162,7 @@ export default gulp.series(
     sprite,
     webp
   ),
-  gulp.series (
+  gulp.series(
     server,
     watcher
   )

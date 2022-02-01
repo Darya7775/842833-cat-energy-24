@@ -9,10 +9,11 @@
 
   @media (min-width: @tablet-width) {
     padding: 27px 0 76px;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 27px 0 86px;
+    padding: 44px 0 86px;
   }
 
   &::before {
@@ -23,5 +24,9 @@
     position: absolute;
     top: 103px;
     left: 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }

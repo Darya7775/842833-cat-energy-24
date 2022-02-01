@@ -1,6 +1,6 @@
 .navigation {
   @media (min-width: @tablet-width) {
-    width: 57%;
+    width: 63%;
     max-width: 441px;
     display: block;
   }
@@ -44,6 +44,10 @@
   list-style: none;
 }
 
+.navigation--text-black {
+  color: #111111;
+}
+
 .navigation__link {
   .font500();
   font-size: 20px;
@@ -85,6 +89,12 @@
 
   @media (min-width: @desktop-width) {
     border-bottom: 2px solid #ffffff;
+  }
+}
+
+.navigation__link--black {
+  @media (min-width: @desktop-width) {
+    color: #111111;
   }
 }
 
