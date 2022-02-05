@@ -12,9 +12,12 @@
 }
 
 .catalog__title {
+  margin: 0;
+  padding: 0;
   .font();
   font-size: 36px;
   line-height: 36px;
+  color: #222222;
   margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
@@ -29,6 +32,8 @@
 }
 
 .catalog__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -46,13 +51,13 @@
 .catalog__item {
   width: 100%;
   max-width: 280px;
-  padding: 19px 0 25px;
+  padding: 21px 0 24px;
   position: relative;
   border-bottom: 1px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
     max-width: 324px;
-    padding: 73px 31px 37px;
+    padding: 73px 37px 39px 39px;
     display: grid;
     grid-template-rows: 161px min-content min-content;
 
@@ -79,6 +84,8 @@
 }
 
 .catalog__item-img {
+  display: block;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     left: 25%;
@@ -89,8 +96,6 @@
   }
 
   &--size-500 {
-    transform: translateX(50%);
-
     @media (min-width: @tablet-width) {
       width: 161px;
       height: 172px;
@@ -104,8 +109,6 @@
   }
 
   &--size-1000 {
-    transform: translateX(32%);
-
     @media (min-width: @tablet-width) {
       width: 168px;
       height: 206px;
@@ -122,12 +125,12 @@
 .catalog__item-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr;
     grid-row: 2/3;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: @desktop-width) {
@@ -136,6 +139,11 @@
 }
 
 .catalog__item-title {
+  display: block;
+  text-decoration: none;
+  color: #222222;
+  margin: 0;
+  padding: 0;
   .font();
   font-size: 16px;
   line-height: 20px;
@@ -160,6 +168,9 @@
 
 
 .catalog__item-button {
+  display: block;
+  text-decoration: none;
+  margin: 0;
   line-height: 20px;
   font-size: 16px;
   width: 100%;

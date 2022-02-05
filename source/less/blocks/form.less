@@ -14,17 +14,20 @@
 }
 
 .form__filter {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .form__filter-title {
+  margin: 0;
+  padding: 0;
   .font();
   font-size: 24px;
   line-height: 26px;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   position: relative;
-  background-color: #ffffff;
-  padding-right: 22px;
+  width: 100%;
 
   &::before {
     content: "";
@@ -33,9 +36,13 @@
     height: 2px;
     background-color: #68b738;
     top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -46,7 +53,14 @@
   }
 }
 
+.form__filter-title span {
+  background: linear-gradient(to top, #ffffff 18px, transparent 18px);
+  padding-right: 22px;
+}
+
 .form__filter-desc {
+  margin: 0;
+  padding: 0;
   .font();
   font-size: 14px;
   line-height: 18px;
@@ -84,6 +98,8 @@
 }
 
 .form__filter-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -133,6 +149,8 @@
 }
 
 .form__filter-list--grid {
+  gap: 13px;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -141,6 +159,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 94px;
   }
 }
 
@@ -190,11 +209,15 @@
   .font();
   font-size: 16px;
   line-height: 18px;
-  color: #444444;
+  color: #222222;
   text-transform: uppercase;
   white-space: nowrap;
   position: relative;
   cursor: pointer;
+
+  &--color {
+    color: #000000;
+  }
 
   &--mark {
     padding-left: 45px;
@@ -241,6 +264,10 @@
   border-radius: 50%;
 }
 
+.form__filter-radio:focus + .form__filter-label-mark {
+  outline: 1px solid #000000;
+}
+
 .form__filter-radio:checked + .form__filter-label-mark::before {
   content: "";
   position: absolute;
@@ -265,6 +292,10 @@
 
 .form__filter-radio:checked:disabled + .form__filter-label-mark::before {
   opacity: 0.3;
+}
+
+.form__filter-checkbox:focus + .form__filter-label-mark {
+  outline: 1px solid #000000;
 }
 
 .form__filter-checkbox:checked + .form__filter-label-mark::before {
@@ -379,14 +410,18 @@
   .button();
   font-size: 16px;
   line-height: 20px;
-  padding: 10px 77px;
+  width: 100%;
+  max-width: 280px;
+  padding: 10px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    padding: 16px 64px;
+    padding: 16px 10px;
+    max-width: 282px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 13px 188px;
+    padding: 13px 10px;
+    max-width: 568px;
   }
 }

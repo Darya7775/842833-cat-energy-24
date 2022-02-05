@@ -59,6 +59,8 @@
 }
 
 .show-more__text {
+  margin: 0;
+  padding: 0;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
@@ -78,7 +80,10 @@
 }
 
 .show-more__button {
-  font-family: "Oswald", sans-serif;
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 100;
   font-size: 16px;
   line-height: 20px;
@@ -91,6 +96,10 @@
   cursor: pointer;
   padding: 10px 10px;
   color: #444444;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
 
   &:active {
     color: rgba(167, 157, 157, 0.3);
